@@ -16,5 +16,122 @@ body {
 
     background-image: url('../images/background.jpg');
     background-size: cover;
-    background-color: rgb(52, 41, 60);
+    background-repeat: no-repeat;
+}
+
+#to_do {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: rgb(26, 22, 51, 0.8);
+    padding: 18px;
+    border-radius: 8px;
+    width: 430px;
+}
+
+#to_do h1 {
+    color: #e5f9ff;
+    
+    font-size: 28px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+.to-do-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.to-do-form input {
+    background-color: transparent;
+    border: none;
+    color: #e5f9ff;
+    font-size: 16px;
+    width: 100%;
+    padding: 4px;
+    border-bottom: 2px solid #ee9ca7;
+}
+
+.to-do-form input:focus-visible {
+    outline: none;
+}
+
+.to-do-form .form-button {
+    border: none;
+    min-width: 40px;
+    min-height: 40px;
+    background-color: #ee9ca7;
+    border-radius: 100%;
+    font-size: 20px;
+    transition: scale 0.5s ease;
+}
+
+.to-do-form .form-button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow: auto;
+}
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    color: #ffffff;
+    background-color: #20203d;
+
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.task .progress.done + .task-description {
+    text-decoration: line-through;
+    color: #e5f9ffa7;
+}
+
+.task .task-description {
+    font-size: 16px;
+    color: #fff;
+    width: 80%;
+}
+
+.task .task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions {
+    min-width: 40px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.action-button {
+    font-size: 16px;
+}
+
+.action-button.edit-button {
+    color: #6c9bbc;
+}
+
+.action-button.delete-button {
+    color: #ee9ca7;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+    #to_do {
+        width: 300px;
+    }
 }
